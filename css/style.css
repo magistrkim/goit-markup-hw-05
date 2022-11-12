@@ -245,21 +245,20 @@ button {
 .work-list-item {
     position: relative;
 }
-.overlay {
+.overlay-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--secondary-title-color);
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding-top: 27px;
-    padding-bottom: 27px;
+    height: 70px;
     background: rgba(47, 48, 58, 0.8);
     backdrop-filter: blur(2px);
-}
-.overlay-text {
-    font-weight: 700;
-    line-height: 1.14;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--secondary-title-color);
 }
 .work-title, 
 .team-title, 
@@ -500,15 +499,15 @@ button {
     transition-duration: var(--anim-duration);
     transition-timing-function: var(--anim-timing-function);
 }
-.gallery-item:hover .overlay-gallery, 
-.gallery-item:focus .overlay-gallery {
-    transform: translateY(0);
-}
 .gallery-image {
     display: inline-block;
     transition-property: box-shadow;
     transition-duration: var(--anim-duration);
     transition-timing-function: var(--anim-timing-function);
+}
+.gallery-image:hover .overlay-gallery, 
+.gallery-image:focus .overlay-gallery {
+    transform: translateY(0);
 }
 .gallery-image:hover, .gallery-image:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
